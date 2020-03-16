@@ -50,7 +50,6 @@ namespace TicTacToe_Q_Learning
 
             button = new Button(x, y, width, height);
             button.AddClickHandler(item => SetContent(ContentOf(currentTurn)));
-            //button.AddClickHandler(item => (item as Button).Reset());
 
             Row = row;
             Column = col;
@@ -93,7 +92,6 @@ namespace TicTacToe_Q_Learning
         public void AddTurnTakenHandler(Action handler)
         {
             button.AddClickHandler(x => handler());
-            // TODO: Add computer handler addition here
         }
 
         public static BoardContent ContentOf(Players player)
