@@ -46,9 +46,6 @@ namespace TicTacToe_Q_Learning
 
         GameType gameType = GameType.HumanVSCom;
 
-        //Timer stateTimer = new Timer(0.5f, TimerUnits.Seconds);
-        //int index = 0;
-
         #endregion
 
         #region Constructors
@@ -162,25 +159,6 @@ namespace TicTacToe_Q_Learning
                 }
             }
         }
-
-        //this whole method is a debug test
-        //public void UpdateStates(GameTime gameTime)
-        //{
-        //    stateTimer.Update(gameTime);
-        //    if (stateTimer.QueryWaitTime(gameTime))
-        //    {
-        //        ComputerInformation c = new ComputerInformation();
-        //        if (index < c.States.Count)
-        //        {
-        //            SetSquaresToState(c.States[index]);
-        //            index++;
-        //        }
-        //        else
-        //        {
-        //            index = 0;
-        //        }
-        //    }
-        //}
 
         public void Draw(SpriteBatch spriteBatch)
         {
@@ -304,8 +282,6 @@ namespace TicTacToe_Q_Learning
             {
                 squares[i].SetContent(BoardContent.None);
             }
-            //computer1 = new Computer(Players.X);
-            //computer2 = new Computer(Players.O);
 
             gameOver = false;
             firstTurn = firstTurn.Opposite();
